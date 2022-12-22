@@ -37,3 +37,9 @@
 .song:not(.selected):active {
     background-color: #515152;
 }
+
+.previous:hover,
+.play:hover,
+.next:hover {
+    color: #b1b2b3;
+}
