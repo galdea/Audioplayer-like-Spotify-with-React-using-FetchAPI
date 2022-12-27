@@ -6,6 +6,14 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 const Body = () => {
 
+  const options = {method: 'GET'};
+
+  fetch('https://assets.breatheco.de/apis/sound/all', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+
+
   const [songs, setSongs] = useState([
     { "id":1, "category":"game", "name":"Mario Castle", "url":"https://assets.breatheco.de/apis/sound/files/mario/songs/castle.mp3" },
     { "id":2, "category":"game", "name":"Mario Star", "url":"https://assets.breatheco.de/apis/sound/files/mario/songs/hurry-starman.mp3"},
